@@ -2,8 +2,8 @@
 
 En första övning i semantisk HTML, lokal utveckling och ett enkelt Git-flöde.
 
-Du får menytexten, restaurangens logotyp och en färdig CSS-fil. Din uppgift är
-att göra om den rena texten till en strukturerad webbsida med HTML.
+Du får menytexten, restaurangens logotyp och en tom CSS-fil. Din uppgift är att
+göra om den rena texten till en strukturerad webbsida med HTML.
 
 ## 1. Skapa ditt eget repository
 
@@ -35,8 +35,8 @@ Utgå från innehållet i [`menu.txt`](menu.txt) och bygg sidan i
   alternativtext.
 - Ändra inte `menu.txt`; den är ert textunderlag.
 
-CSS-filen är redan kopplad till HTML-dokumentet. Den använder huvudsakligen
-elementselektorer, så sidan får mer form i takt med att innehållet märks upp.
+CSS-filen är redan kopplad till HTML-dokumentet men är tom från början. När vi
+kommer till CSS-momentet fortsätter du att arbeta i samma projekt.
 
 ## 4. Kör sidan i Chrome
 
