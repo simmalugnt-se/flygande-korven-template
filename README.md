@@ -11,11 +11,14 @@ Du behöver ha följande på datorn:
 
 - Visual Studio Code;
 - Google Chrome;
-- Git;
+- [GitHub Desktop](https://desktop.github.com/);
 - ett GitHub-konto som du kan logga in på.
 
 Du behöver inte använda terminalen i den här övningen. Vi gör hela arbetsflödet
-i GitHub och VS Codes gränssnitt.
+i GitHub, GitHub Desktop och VS Code.
+
+GitHub Desktop har det Git-stöd som behövs för övningen. Du behöver inte
+installera Git separat eller skriva några Git-kommandon i terminalen.
 
 ## 1. Skapa ditt eget repository
 
@@ -26,29 +29,46 @@ i GitHub och VS Codes gränssnitt.
 
 Alla i klassen börjar då med samma material men arbetar i separata repositories.
 
-## 2. Hämta projektet till VS Code
+## 2. Förbered GitHub Desktop
+
+### Logga in
+
+1. Öppna GitHub Desktop.
+2. Logga in med GitHub-kontot som du nyss skapade.
+3. Följ anvisningarna i webbläsaren och gå sedan tillbaka till GitHub Desktop.
+
+### Kontrollera namn och e-postadress
+
+Git använder namn och e-postadress för att visa vem som har skapat en commit.
+
+1. På Mac: välj **GitHub Desktop → Settings** i menyraden. På Windows: välj
+   **File → Options**.
+2. Välj **Git**.
+3. Skriv ditt namn i fältet **Name**.
+4. Välj en e-postadress som hör till ditt GitHub-konto i listan **Email**.
+5. Klicka på **Save**.
+
+## 3. Hämta projektet med GitHub Desktop
 
 Att klona betyder att du hämtar GitHub-projektet till din dator så att du kan
 arbeta med filerna i VS Code.
 
-1. Öppna ditt nya repository på GitHub.
-2. Klicka på den gröna knappen **Code**.
-3. Kontrollera att fliken **Local** och alternativet **HTTPS** är valda.
-4. Kopiera adressen som visas.
-5. Öppna VS Code.
-6. Klicka på **Source Control** i vänsterspalten. Ikonen ser ut som en förgrenad
-   linje med cirklar.
-7. Klicka på **Clone Repository**.
-8. Klistra in HTTPS-adressen och tryck på Enter.
-9. Välj en plats på datorn där projektmappen ska sparas, exempelvis Dokument.
-10. Klicka på **Open** när VS Code frågar om du vill öppna projektet.
-11. Om frågan **Do you trust the authors of the files in this folder?** visas,
+1. Välj **File → Clone Repository** i GitHub Desktop.
+2. Välj fliken **GitHub.com**.
+3. Leta upp repositoryt som du skapade från kursens template.
+4. Välj en plats på datorn där projektmappen ska sparas, exempelvis Dokument.
+5. Klicka på **Clone**.
+6. Klicka på **Open in Visual Studio Code** när projektet har hämtats.
+7. Om frågan **Do you trust the authors of the files in this folder?** visas,
     välj att lita på projektet. Det är ditt eget repository från kursens template.
+
+Om knappen för VS Code inte visas: öppna GitHub Desktops inställningar, välj
+**Integrations** och välj Visual Studio Code som **External editor**.
 
 Öppna **Explorer** längst upp i vänsterspalten. Där ska du nu se `README.md`,
 `menu.txt`, `index.html`, `style.css` och mappen `assets`.
 
-## 3. Uppgiften
+## 4. Uppgiften
 
 Utgå från innehållet i [`menu.txt`](menu.txt) och bygg sidan i
 [`index.html`](index.html).
@@ -64,7 +84,7 @@ Utgå från innehållet i [`menu.txt`](menu.txt) och bygg sidan i
 CSS-filen är redan kopplad till HTML-dokumentet men är tom från början. När vi
 kommer till CSS-momentet fortsätter du att arbeta i samma projekt.
 
-## 4. Kör sidan i Chrome
+## 5. Kör sidan i Chrome
 
 Live Server startar en liten lokal webbserver på din dator. Den gör att du kan
 se sidan i webbläsaren och uppdaterar den när du sparar.
@@ -100,29 +120,23 @@ Om **Go Live** inte syns kan du högerklicka på `index.html` i Explorer och vä
 Låt Live Server vara igång medan du arbetar. Klicka på portnumret längst ner i
 VS Code när du vill stänga servern.
 
-## 5. Spara en version med Git
+## 6. Spara en version med GitHub Desktop
 
 När sidan har fått sin första struktur ska du spara en version, en så kallad
-commit. Det gör du också i VS Codes gränssnitt.
+commit. Det gör du i GitHub Desktop.
 
 1. Spara `index.html`.
-2. Klicka på **Source Control** i vänsterspalten.
-3. Under **Changes** ser du filerna som har ändrats. Klicka på `index.html` om du
-   vill granska skillnaden mellan den gamla och den nya versionen.
-4. För muspekaren över `index.html` under **Changes** och klicka på plustecknet.
-   Filen flyttas till **Staged Changes**. Det betyder att den ska ingå i nästa
-   sparade version.
-5. Skriv `Märker upp korvmenyn` i fältet **Message**.
-6. Klicka på **Commit**.
-7. Klicka på **Sync Changes** för att skicka din commit till GitHub.
-8. Om VS Code ber dig logga in på GitHub, följ länken och godkänn inloggningen i
-   webbläsaren.
+2. Gå till GitHub Desktop.
+3. Till vänster ser du filerna som har ändrats. Kontrollera att `index.html` är
+   markerad.
+4. Klicka på `index.html` för att granska skillnaden mellan den gamla och den nya
+   versionen.
+5. Skriv `Märker upp korvmenyn` i fältet **Summary**.
+6. Klicka på **Commit to main**.
+7. Klicka på **Push origin** för att skicka din commit till GitHub.
 
 Kontrollera därefter på GitHub att din commit och din uppdaterade HTML-fil finns
 i ditt eget repository.
-
-Om VS Code visar ett fel om Git, `user.name` eller `user.email`: stanna där och
-be om hjälp. Det är en engångsinställning och inte en del av själva HTML-övningen.
 
 ## Klart när
 
