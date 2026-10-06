@@ -1,147 +1,116 @@
 # Flygande Korven
 
-En första övning i semantisk HTML, lokal utveckling och ett enkelt Git-flöde.
+En första övning i HTML, lokal utveckling och ett enkelt Git-flöde.
 
-Du får menytexten, restaurangens logotyp och en tom CSS-fil. Din uppgift är att
-göra om den rena texten till en strukturerad webbsida med HTML.
+Du får menytexten, restaurangens logotyp och en tom CSS-fil. Du ska göra om texten till en strukturerad webbsida. Vi börjar lokalt under lektion 1 och använder GitHub Desktop under lektion 2.
 
-## Innan du börjar
+## Lektion 1 — hämta filerna och skriv HTML
 
-Du behöver ha följande på datorn:
+Till första lektionen behöver du **Visual Studio Code** och **Google Chrome**. GitHub Desktop och ditt GitHub-konto använder vi på andra lektionen. Du behöver inga terminalkommandon eller någon separat Git-installation för övningen.
 
-- Visual Studio Code;
-- Google Chrome;
-- [GitHub Desktop](https://desktop.github.com/);
-- ett GitHub-konto som du kan logga in på.
+### 1. Hämta startmaterialet från kursens Google Drive
 
-Du behöver inte använda terminalen i den här övningen. Vi gör hela arbetsflödet
-i GitHub, GitHub Desktop och VS Code.
+1. Öppna [Underlagsfiler till DD26](https://drive.google.com/drive/folders/1VJpyU_E2xTai6NmyjZNZtn3rgniVHLG6).
+2. Ladda ned **flygande-korven.zip** till din dator.
+3. Packa upp ZIP-filen.
+4. Flytta den uppackade mappen `flygande-korven` till en plats du hittar igen, exempelvis Dokument.
+5. Öppna VS Code och välj **File → Open Folder**. Välj mappen `flygande-korven`.
+6. Om VS Code frågar om du litar på innehållet: kontrollera att det är kursens startmaterial och godkänn.
 
-GitHub Desktop har det Git-stöd som behövs för övningen. Du behöver inte
-installera Git separat eller skriva några Git-kommandon i terminalen.
+Vi hämtar startfilerna från Google Drive under lektion 1. Du behöver inget GitHub-konto den här dagen.
 
-## 1. Skapa ditt eget repository
+I **Explorer** ska du se `README.md`, `menu.txt`, `index.html`, `style.css` och mappen `assets`. Om du bara ser ytterligare en projektmapp har du öppnat mappen en nivå för högt. Öppna mappen där `index.html` ligger.
 
-1. Klicka på **Use this template** ovanför fillistan på GitHub.
-2. Välj **Create a new repository**.
-3. Döp repositoryt till exempelvis `fornamn-efternamn-flygande-korven`.
-4. Skapa repositoryt på ditt eget GitHub-konto.
+Arbeta i den uppackade mappen. Behåll samma projektmapp till lektion 2.
 
-Alla i klassen börjar då med samma material men arbetar i separata repositories.
+### 2. Visa sidan i Chrome
 
-## 2. Förbered GitHub Desktop
+Live Server visar din lokala sida i webbläsaren och uppdaterar den när du sparar.
 
-### Logga in
+1. Öppna **Extensions** i VS Code och sök efter `Live Server`.
+2. Installera **Live Server** av **Ritwick Dey**.
+3. Öppna `index.html` och klicka på **Go Live** längst ner i VS Code. Du kan också högerklicka på filen och välja **Open with Live Server**.
+4. Om en annan webbläsare öppnas: kopiera adressen till Chrome. Adressen börjar med `http://127.0.0.1` eller `http://localhost`.
+5. I `index.html`: markera hela kommentaren som börjar med `<!--` och slutar med `-->`, inklusive båda teckenparen och alla rader mellan dem. Behåll resten av filen.
+6. Skriv `Hej världen` för att ersätta allt du markerat. Du behöver inga nya HTML-taggar i detta första steg.
+7. Spara med **Cmd + S** på Mac eller **Ctrl + S** på Windows och kontrollera att texten syns i Chrome. Ändra till en egen hälsning, spara och kontrollera igen.
 
-1. Öppna GitHub Desktop.
-2. Logga in med GitHub-kontot som du nyss skapade.
-3. Följ anvisningarna i webbläsaren och gå sedan tillbaka till GitHub Desktop.
+**Om Live Server inte fungerar:** öppna `index.html` direkt i Chrome. Spara i VS Code och ladda sedan om sidan i Chrome efter varje ändring. Det fungerar för den här HTML/CSS-övningen.
 
-### Kontrollera namn och e-postadress
+### 3. Märk upp menyn
 
-Git använder namn och e-postadress för att visa vem som har skapat en commit.
+Utgå från [`menu.txt`](menu.txt) och bygg sidan i [`index.html`](index.html). Prova själv med stöd av lektionens exempel. Använd ingen kodagent för den första HTML-övningen.
 
-1. På Mac: välj **GitHub Desktop → Settings** i menyraden. På Windows: välj
-   **File → Options**.
-2. Välj **Git**.
-3. Skriv ditt namn i fältet **Name**.
-4. Välj en e-postadress som hör till ditt GitHub-konto i listan **Email**.
-5. Klicka på **Save**.
-
-## 3. Hämta projektet med GitHub Desktop
-
-Att klona betyder att du hämtar GitHub-projektet till din dator så att du kan
-arbeta med filerna i VS Code.
-
-1. Välj **File → Clone Repository** i GitHub Desktop.
-2. Välj fliken **GitHub.com**.
-3. Leta upp repositoryt som du skapade från kursens template.
-4. Välj en plats på datorn där projektmappen ska sparas, exempelvis Dokument.
-5. Klicka på **Clone**.
-6. Klicka på **Open in Visual Studio Code** när projektet har hämtats.
-7. Om frågan **Do you trust the authors of the files in this folder?** visas,
-    välj att lita på projektet. Det är ditt eget repository från kursens template.
-
-Om knappen för VS Code inte visas: öppna GitHub Desktops inställningar, välj
-**Integrations** och välj Visual Studio Code som **External editor**.
-
-Öppna **Explorer** längst upp i vänsterspalten. Där ska du nu se `README.md`,
-`menu.txt`, `index.html`, `style.css` och mappen `assets`.
-
-## 4. Uppgiften
-
-Utgå från innehållet i [`menu.txt`](menu.txt) och bygg sidan i
-[`index.html`](index.html).
-
-- Använd semantiska HTML-element där de passar.
-- Skapa en logisk rubrikstruktur.
-- Presentera menyn som en lista eller en beskrivningslista.
+- Använd HTML-element som passar innehållet.
+- Skapa en begriplig rubrikstruktur.
+- Presentera menyn som en lista eller beskrivningslista.
 - Märk upp telefonnummer, öppettider och kontaktuppgifter tydligt.
-- Lägg till logotypen från `assets/flygande-korven-logo.png` med en användbar
-  alternativtext.
-- Ändra inte `menu.txt`; den är ert textunderlag.
+- Lägg till logotypen från `assets/flygande-korven-logo.png` med en användbar alternativtext.
+- Behåll `menu.txt` som oförändrat textunderlag.
 
-CSS-filen är redan kopplad till HTML-dokumentet men är tom från början. När vi
-kommer till CSS-momentet fortsätter du att arbeta i samma projekt.
+CSS-filen är redan kopplad till sidan men är tom från början. Styling kommer under lektion 2.
 
-## 5. Kör sidan i Chrome
+**Miniminivå idag:** du har själv ändrat filen, sparat, sett resultatet i Chrome och kan hitta tillbaka till projektet.
 
-Live Server startar en liten lokal webbserver på din dator. Den gör att du kan
-se sidan i webbläsaren och uppdaterar den när du sparar.
+**Till nästa gång:** färdigställ hela Korvens innehåll med rubriker, stycken, menylista, logotyp, telefonnummer och öppettider. Styling kommer nästa gång.
 
-### Installera Live Server
+**När du är klar:** prova att samla sidans delar i `header`, `main` och `footer`, och lägg till en navigationslänk till menyn. Detta är frivillig fördjupning.
 
-Det här behöver bara göras första gången du använder VS Code.
+## Lektion 2 — spara historik och publicera ditt eget repo
 
-1. Klicka på **Extensions** i vänsterspalten. Ikonen ser ut som fyra rutor.
-2. Sök efter `Live Server`.
-3. Välj **Live Server** av **Ritwick Dey**.
-4. Klicka på **Install**.
+Nu behöver du [GitHub Desktop](https://desktop.github.com/) och ett eget GitHub-konto som du kan logga in på. Vi använder projektmappen från lektion 1, inklusive din egen HTML.
 
-### Öppna sidan
+### 4. Förbered GitHub Desktop
 
-1. Klicka på **Explorer** längst upp i vänsterspalten.
-2. Klicka på `index.html` så att filen öppnas i editorn.
-3. Klicka på **Go Live** längst ner till höger i VS Codes statusrad.
-4. En webbläsare öppnas med en adress som börjar med `http://127.0.0.1` eller
-   `http://localhost`.
-5. Om sidan öppnas i en annan webbläsare kan du kopiera adressen och öppna den i
-   Chrome.
+1. Öppna GitHub Desktop och logga in på ditt GitHub-konto via webbläsaren.
+2. Öppna **GitHub Desktop → Settings** på Mac eller **File → Options** på Windows.
+3. Under **Git**, kontrollera ditt namn och välj en e-postadress som hör till ditt konto. Spara.
 
-Om **Go Live** inte syns kan du högerklicka på `index.html` i Explorer och välja
-**Open with Live Server**.
+### 5. Gör den befintliga projektmappen till ett repository
 
-### Prova att ändra sidan
+Ett repository, eller repo, är ditt projekt med versionshistorik.
 
-1. Gör en liten ändring i `index.html`.
-2. Spara med **Cmd + S** på Mac eller **Ctrl + S** på Windows.
-3. Gå tillbaka till Chrome. Sidan ska laddas om automatiskt.
+1. Välj **File → Add Local Repository** i GitHub Desktop.
+2. Välj exakt samma `flygande-korven`-mapp som du arbetade i under lektion 1.
+3. GitHub Desktop säger att mappen inte är ett Git-repository. Klicka på länken **create a repository here**.
+4. Behåll det förifyllda namnet och sökvägen. Då används den befintliga mappen.
+5. Låt **Initialize this repository with a README** vara avmarkerat; det finns redan en README.
+6. Klicka på **Create Repository**.
+7. Titta under **History**. GitHub Desktop har skapat en första commit, **Initial commit**, som innehåller dina befintliga filer.
+8. Klicka på **Publish repository**. Kontrollera att det är ditt eget konto som står som ägare.
+9. För ett publikt kursrepo: avmarkera **Keep this code private**, enligt lärarens instruktion. Klicka sedan på **Publish repository**.
+10. Öppna ditt eget repo på GitHub och kontrollera att filerna och din HTML finns där.
 
-Låt Live Server vara igång medan du arbetar. Klicka på portnumret längst ner i
-VS Code när du vill stänga servern.
+Om GitHub Desktop i steg 3 hittar ett befintligt repo: lägg till det och kontrollera historiken tillsammans med läraren. Skapa inte en extra projektmapp.
 
-## 6. Spara en version med GitHub Desktop
+Publicering av repot gör koden tillgänglig på GitHub. Publicering av själva webbplatsen med GitHub Pages går vi igenom senare.
 
-När sidan har fått sin första struktur ska du spara en version, en så kallad
-commit. Det gör du i GitHub Desktop.
+### 6. Öva på commit och push med en ny ändring
 
-1. Spara `index.html`.
-2. Gå till GitHub Desktop.
-3. Till vänster ser du filerna som har ändrats. Kontrollera att `index.html` är
-   markerad.
-4. Klicka på `index.html` för att granska skillnaden mellan den gamla och den nya
-   versionen.
-5. Skriv `Märker upp korvmenyn` i fältet **Summary**.
-6. Klicka på **Commit to main**.
-7. Klicka på **Push origin** för att skicka din commit till GitHub.
+Den första committen finns redan. Gör nu en liten ny ändring för att prova arbetsflödet:
 
-Kontrollera därefter på GitHub att din commit och din uppdaterade HTML-fil finns
-i ditt eget repository.
+1. Öppna samma projektmapp i VS Code. Du kan använda **Open in Visual Studio Code** i GitHub Desktop.
+2. Gör en liten förbättring i `index.html`, till exempel en tydligare rubrik. Spara och kontrollera resultatet i Chrome.
+3. Gå till **Changes** i GitHub Desktop. Klicka på `index.html` och granska skillnaden mellan den gamla och den nya versionen.
+4. Skriv en beskrivning av ändringen i **Summary**, exempelvis `Förtydligar menyns rubrik`.
+5. Klicka på **Commit to main**. Om din lokala gren har ett annat namn visas det namnet på knappen.
+6. Klicka på **Push origin** för att skicka committen till GitHub.
+7. Kontrollera på GitHub att den nya committen och ändringen finns i ditt eget repo.
+
+Om knappen för VS Code inte visas: välj VS Code som **External editor** under **Integrations** i GitHub Desktops inställningar. Du kan också öppna projektmappen direkt i VS Code.
+
+## Fortsättning — CSS
+
+Under lektion 2 provar vi typografi, färger, mått, padding, margin och border. Fortsätt sedan med styling enligt lärarens uppgift och den visuella referensen.
+
+Efter varje avgränsad förbättring: spara, kontrollera i Chrome, granska ändringen i GitHub Desktop, gör en commit och pusha.
 
 ## Klart när
 
-- sidan går att öppna med Live Server;
-- allt innehåll från `menu.txt` finns med;
-- rubriker och sektioner har en begriplig struktur;
+- allt innehåll från `menu.txt` finns på sidan;
+- rubriker, listor och sektioner har en begriplig struktur;
 - logotypen visas och har alternativtext;
-- HTML-dokumentet har sparats i en commit och pushats till GitHub.
+- sidan kan visas lokalt i Chrome;
+- du har provat styling enligt lektionens instruktioner;
+- projektet finns i ditt eget GitHub-repo;
+- du har granskat, committat och pushat minst en ny ändring efter den första publiceringen.
