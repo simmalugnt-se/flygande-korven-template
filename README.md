@@ -8,6 +8,13 @@ Du får menytexten, restaurangens logotyp och en tom CSS-fil. Du ska göra om te
 
 Till första lektionen behöver du **Visual Studio Code** och **Google Chrome**. GitHub Desktop och ditt GitHub-konto använder vi på andra lektionen. Du behöver inga terminalkommandon eller någon separat Git-installation för övningen.
 
+### Förbered VS Code och Live Server
+
+1. Starta VS Code.
+2. Öppna **Extensions** och sök efter `Live Server`.
+3. Installera **Live Server** av **Ritwick Dey**.
+4. Starta Chrome. Nu är verktygen redo innan du hämtar projektet.
+
 ### 1. Hämta startmaterialet från kursens Google Drive
 
 1. Öppna [Underlagsfiler till DD26](https://drive.google.com/drive/folders/1VJpyU_E2xTai6NmyjZNZtn3rgniVHLG6).
@@ -27,13 +34,11 @@ Arbeta i den uppackade mappen. Behåll samma projektmapp till lektion 2.
 
 Live Server visar din lokala sida i webbläsaren och uppdaterar den när du sparar.
 
-1. Öppna **Extensions** i VS Code och sök efter `Live Server`.
-2. Installera **Live Server** av **Ritwick Dey**.
-3. Öppna `index.html` och klicka på **Go Live** längst ner i VS Code. Du kan också högerklicka på filen och välja **Open with Live Server**.
-4. Om en annan webbläsare öppnas: kopiera adressen till Chrome. Adressen börjar med `http://127.0.0.1` eller `http://localhost`.
-5. I `index.html`: markera hela kommentaren som börjar med `<!--` och slutar med `-->`, inklusive båda teckenparen och alla rader mellan dem. Behåll resten av filen.
-6. Skriv `Hej världen` för att ersätta allt du markerat. Du behöver inga nya HTML-taggar i detta första steg.
-7. Spara med **Cmd + S** på Mac eller **Ctrl + S** på Windows och kontrollera att texten syns i Chrome. Ändra till en egen hälsning, spara och kontrollera igen.
+1. Öppna `index.html` och klicka på **Go Live** längst ner i VS Code. Du kan också högerklicka på filen och välja **Open with Live Server**.
+2. Om en annan webbläsare öppnas: kopiera adressen till Chrome. Adressen börjar med `http://127.0.0.1` eller `http://localhost`.
+3. I `index.html`: markera hela kommentaren som börjar med `<!--` och slutar med `-->`, inklusive båda teckenparen och alla rader mellan dem. Behåll resten av filen.
+4. Skriv `Hej världen` för att ersätta allt du markerat. Du behöver inga nya HTML-taggar i detta första steg.
+5. Spara med **Cmd + S** på Mac eller **Ctrl + S** på Windows och kontrollera att texten syns i Chrome. Ändra till en egen hälsning, spara och kontrollera igen.
 
 **Om Live Server inte fungerar:** öppna `index.html` direkt i Chrome. Spara i VS Code och ladda sedan om sidan i Chrome efter varje ändring. Det fungerar för den här HTML/CSS-övningen.
 
